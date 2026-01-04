@@ -1,34 +1,140 @@
+body {
+  margin: 0;
+  background-color: #f4f6f8;
+}
+
 .app {
   padding: 20px;
   font-family: Arial, sans-serif;
+  max-width: 1100px;
+  margin: auto;
 }
 
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* FILTERS */
 .filters {
-  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .filters input,
 .filters select {
-  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
+.filters button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #34495e;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #2c3e50;
+}
+
+/* PRODUCT GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  border: 1px solid #ddd;
-  padding: 10px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 6px;
+  transition: box-shadow 0.2s ease;
 }
 
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.card p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #2980b9;
+}
+
+.card button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* CART */
 .cart {
-  margin-top: 30px;
+  margin-top: 40px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.cart h3 {
+  margin-top: 0;
+  color: #2c3e50;
 }
 
 .cart-item {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.cart-item input {
+  width: 60px;
+  padding: 5px;
+}
+
+.cart-item button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #c0392b;
+}
+
+.cart h4 {
+  margin-top: 15px;
+  text-align: right;
+  color: #27ae60;
 }
